@@ -19,10 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-Ks-FgA" userLabel="RecordView">
-                                <rect key="frame" x="0.0" y="40" width="600" height="280"/>
+                                <rect key="frame" x="0.0" y="40" width="600" height="240"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18q-9R-UVY" customClass="EZAudioPlotGL">
-                                        <rect key="frame" x="96" y="0.0" width="504" height="280"/>
+                                        <rect key="frame" x="96" y="0.0" width="504" height="240"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -30,7 +31,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-y3-Dqt">
-                                        <rect key="frame" x="8" y="100" width="80" height="80"/>
+                                        <rect key="frame" x="8" y="78" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="hTn-Tg-b2A"/>
@@ -44,7 +45,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Q6C-y3-Dqt" firstAttribute="centerY" secondItem="Evc-Ks-FgA" secondAttribute="centerY" id="5mb-hS-KfG"/>
+                                    <constraint firstItem="Q6C-y3-Dqt" firstAttribute="centerY" secondItem="Evc-Ks-FgA" secondAttribute="centerY" constant="-2" id="5mb-hS-KfG"/>
                                     <constraint firstItem="Q6C-y3-Dqt" firstAttribute="leading" secondItem="Evc-Ks-FgA" secondAttribute="leading" constant="8" id="9Yt-Rp-2PQ"/>
                                     <constraint firstItem="18q-9R-UVY" firstAttribute="top" secondItem="Evc-Ks-FgA" secondAttribute="top" id="ONC-xD-6Fz"/>
                                     <constraint firstAttribute="trailing" secondItem="18q-9R-UVY" secondAttribute="trailing" id="avG-8b-FDP"/>
@@ -57,6 +58,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-K4-ejS" customClass="EZAudioPlot">
                                         <rect key="frame" x="96" y="0.0" width="504" height="280"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -125,12 +127,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="top" secondItem="Evc-Ks-FgA" secondAttribute="bottom" id="29X-nb-Xea"/>
+                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="top" secondItem="Evc-Ks-FgA" secondAttribute="bottom" constant="40" id="29X-nb-Xea"/>
                             <constraint firstItem="YvK-47-4KV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6cv-DG-XfK"/>
-                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="top" secondItem="Evc-Ks-FgA" secondAttribute="bottom" id="73M-BM-9DF"/>
+                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="top" secondItem="Evc-Ks-FgA" secondAttribute="bottom" constant="40" id="73M-BM-9DF"/>
                             <constraint firstItem="eTR-2e-F2Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="94S-fS-Nlj"/>
                             <constraint firstItem="YvK-47-4KV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9z4-kl-laj"/>
-                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="height" secondItem="Evc-Ks-FgA" secondAttribute="height" id="DKu-jW-FAt"/>
+                            <constraint firstItem="Tdj-f0-Fjb" firstAttribute="height" secondItem="Evc-Ks-FgA" secondAttribute="height" constant="40" id="DKu-jW-FAt"/>
                             <constraint firstItem="NLO-kK-gbm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hng-Gz-zfo"/>
                             <constraint firstItem="eTR-2e-F2Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="OLH-DV-ysm"/>
                             <constraint firstItem="Tdj-f0-Fjb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Oe6-70-6ax"/>
@@ -150,11 +152,11 @@
                     </view>
                     <connections>
                         <outlet property="playBtn" destination="oGR-al-zfl" id="3gm-eo-BOa"/>
+                        <outlet property="playPlot" destination="eG5-K4-ejS" id="YSf-Sd-2rC"/>
                         <outlet property="playTimeLbl" destination="eTR-2e-F2Y" id="m9W-nf-KhR"/>
-                        <outlet property="playingPlot" destination="eG5-K4-ejS" id="QSy-vj-e0y"/>
                         <outlet property="recordBtn" destination="Q6C-y3-Dqt" id="2qo-JY-dAZ"/>
+                        <outlet property="recordPlot" destination="18q-9R-UVY" id="3yv-rX-6XD"/>
                         <outlet property="recordTimeLbl" destination="NLO-kK-gbm" id="ULX-QJ-voX"/>
-                        <outlet property="recordingPlot" destination="18q-9R-UVY" id="t9c-YJ-jyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
