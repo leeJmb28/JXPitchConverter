@@ -89,7 +89,7 @@
     
     BOOL isSelected = _playBtn.selected;
     if (!isSelected) {
-        [_player playAudioFile:_recorder.audioPath];
+        [_player playAudioFile:_recorder.audioPathURL];
     } else {
         [_player stop];
     }

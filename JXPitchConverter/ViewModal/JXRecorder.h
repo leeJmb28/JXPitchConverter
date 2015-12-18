@@ -21,7 +21,8 @@
 
 @interface JXRecorder : NSObject
 
-@property (nonatomic, readonly) NSURL         *audioPath;
+@property (nonatomic, readonly) NSURL         *audioPathURL;
+@property (nonatomic, readonly) NSString      *notePath;
 @property (nonatomic)           BOOL          isRecording;
 @property (nonatomic, assign)   id<JXRecorderDelegate> delegate;
 

@@ -30,10 +30,7 @@ EZAudioFFTDelegate>
         _delegate = delegate;
         _plot = plot;
         
-        [self setupAudioSession];
-        [self setupPlot];
-        
-        _player = [EZAudioPlayer audioPlayerWithDelegate:self];
+        [self setup];
     }
     return self;
 }
@@ -46,15 +43,20 @@ EZAudioFFTDelegate>
         _delegate = delegate;
         _plotGL = plot;
         
-        [self setupAudioSession];
-        [self setupPlot];
-        
-        _player = [EZAudioPlayer audioPlayerWithDelegate:self];
+        [self setup];
     }
     return self;
 }
 
 #pragma mark - Component setup
+
+- (void)setup
+{
+    [self setupAudioSession];
+    [self setupPlot];
+    
+    _player = [EZAudioPlayer audioPlayerWithDelegate:self];
+}
 
 - (void)setupPlot
 {
