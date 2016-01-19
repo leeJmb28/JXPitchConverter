@@ -209,7 +209,7 @@ withNumberOfChannels:(UInt32)numberOfChannels
       withBufferSize:(UInt32)bufferSize
 withNumberOfChannels:(UInt32)numberOfChannels
 {
-    if (_isRecording) {
+    if (_isRecording && _recorder) {
         [_recorder appendDataFromBufferList:bufferList withBufferSize:bufferSize];
     }
 }
@@ -219,6 +219,7 @@ withNumberOfChannels:(UInt32)numberOfChannels
 - (void)recorderDidClose:(EZRecorder *)recorder
 {
     recorder.delegate = nil;
+    _recorder = nil;
 }
 
 - (void)recorderUpdatedCurrentTime:(EZRecorder *)recorder
